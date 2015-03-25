@@ -1,0 +1,9 @@
+//create and fill up a json object
+var jsonObjects = [];
+jsonObjects.push({
+                        companyname: schoolName,
+                        internalid: internalid
+                    });
+//Convert the JSON object into a string                    
+var jsonObject = JSON.stringify(jsonObjects);
+                
