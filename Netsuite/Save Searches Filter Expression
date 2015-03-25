@@ -1,0 +1,6 @@
+
+//1
+var search = nlapiLoadSearch('transaction','59');
+
+//2
+search.getFilterExpression();
