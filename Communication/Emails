@@ -1,0 +1,31 @@
+//Invistigation Steps
+1-read the issue
+2-re-read
+3-replucate the scenario with the EXACT data
+4-analysis
+5-prepare the skeleton to write your emai
+
+
+
+Hello Ron,
+
+The issue here is that the shipping estimator is only an estimator.
+The cart estimator works by a simple method to give an approximate price, it basically calculates and gives a price based from a commercial zip code and the lowest priced shipping method available, not taking into account any specific shipping rules.
+
+However, the checkout component does a different and more accurate calculation. The checkout considers all the proper variables (e.g. real address, weight, etc.).
+
+The estimator behavior is a known factor, many other customers share the same frustration with this component.
+
+After reproducing the scenario,note that if you click the estimate button again, the estimator will re-estimate accordingly to the current list in the cart,which handles the case where items are removed from the order
+
+If the current behavior is not acceptable to you, there are a few possible solutions:
+1)We can remove the estimator to avoid confusion for the users.
+2)We can look into forcing the estimate button to be automatically clicked to re-estimate on page load.
+3)We look into implementing a custom estimator solution that would be closer to the checkout page.
+
+In addition we can mention this defect to NetSuite which may help its priority in being resolved by NetSuite as it has been request before.
+
+Please contact me by phone or email for any further details.
+
+Regards, 
+
