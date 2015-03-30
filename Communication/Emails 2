@@ -1,0 +1,29 @@
+Hi Mike,
+
+This is Izz from the Web Team,
+Question 1: Yes you are correct, it is a different product that is being used than the one in the link.
+Dynoraxx uses site builder which does not support responsive design, but suite eCommerce advance does.
+Having a different product features on a separate domain name does solve the issue, but the cart will still be unresponsive because it will still be using the site builder cart.
+
+
+For question 2, we can't be 100% sure what is cause of the issue without a login to investigate.
+However, I can offer a list of the most common issues which prevents items from appearing on the store.
+
+1- Display item on web store check box,
+	Navigation:
+	Go to: List>Web Site>items
+	Click edit on the item is required to be displayed
+	Go to Web store Tab
+	Check Display In Web Store check box
+	
+2- Pricing, the item will not appear if the pricing is not set.
+	Navigation:
+	Go to: Sales/ Pricing Tab on the item page.
+	Make sure a price is set for the item.
+	
+3- Category, Make sure that items are classified under a specific category.
+	Navigation:
+	Go to: List>Web Site>Categories
+
+Let me know if you have any questions or comments.
+Regards,
