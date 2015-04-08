@@ -1,0 +1,98 @@
+
+//JS modal BOX
+$( function() {
+
+	// Global variables
+	var closeModalBox = $('.modalBoxClose');
+
+	// Launch the Modal box
+	$('body').one( 'click', '#register_new, #submitter_new', function(e) {
+
+		// Create container
+		$('.registrationPage').prepend('<div id="modalBackground"  oncontextmenu="return false"></div>');
+		
+		// Position and prepare the modal to have a proper layout		
+		e.preventDefault();
+		$('html, body').animate({ scrollTop: 0 }, 0);
+
+		// Inject modal content
+		$('#modalBackground').load('/c.1312783/site/modal.html');
+
+		// Show the modal box
+		$('#modalContent, #modalBackground').show();
+
+		// Lock modal into place
+		$('#modalBackground').on('scroll mousewheel', function(e){
+
+			e.preventDefault();
+			e.stopPropagation();
+			return false;
+		});
+
+		// Cleanup look of the the modal box
+		$('html').css( 'overflow-y', 'hidden');
+
+	});
+
+	// Hide the modal box on close
+	$('#modalBackground').on( 'click', '.modalBoxClose' , function( e ){
+		
+		e.preventDefault();
+
+		if( $('[name=payingWith]:checked').val() == 1 ) {
+
+			$('#submitter').show();
+			$('#submitter_new').hide();
+		}
+		else {
+			
+			$('#submitter_new').show();
+			$('#submitter').hide();		
+		}
+		
+		enableButton();
+		clearStoredData();
+		$.cookie('detection', '');
+
+		$('#modalContent, #modalBackground').remove();
+		$('html').css( 'overflow-y', 'visible');
+	});
+});
+
+//CSS MODAL BOX
+/* Modal box */
+
+#modalBackground{
+	background-color: rgba(0,0,0,0.5);
+	display: none;
+	opacity: 0.5;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index:2222;
+}
+#mainContent {
+	font-size: 13px;
+	margin: 5% auto;
+	min-height: 115px;
+	width: 375px;
+}
+#modalContent {
+	background: #fff;
+	color: #444444;
+	position: relative;
+	width: 375px;
+	min-height: 150px;
+	padding: 16px;
+	border: 1px solid #361277;
+	z-index: 2223;
+	overflow: auto;
+	border-radius: 10px;
+}
+.modalBoxClose {
+	color: #361277;
+	cursor: pointer;
+	float: left;
+}
